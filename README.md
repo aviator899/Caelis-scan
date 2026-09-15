@@ -16,7 +16,7 @@ Scanning targets you do not own or have explicit written permission to test is i
   - 🟡 **Medium** (Yellow)
   - 🔵 **Low** (Light Blue)
   - 🟢 **Info** (green)
-
+# should I change info to no p
 ## Installation
 1. Clone the repo:
    ```bash
@@ -43,5 +43,12 @@ python main.py
 **Scan a specific target:**
 ```bash
 python main.py --target http://example.com
-# ORpython main.py --target 192.168.1.1
+# OR
+python main.py --target 192.168.1.1
+# limit how many pages the crawler visits (default: 25)
+python main.py --target http://example.com --max-pages 10
+# scan only the given URL, skip crawling other pages
+python main.py --target http://example.com --no-crawl
+# skip CVE lookups against detected software versions
+python main.py --target http://example.com --no-cve
 ```
