@@ -7,28 +7,30 @@ from scanners.web_scanner import scan_web
 def main():
     parser = argparse.ArgumentParser(description="Caelis Scan - Python Vulnerability Scanner")
     parser.add_argument("--target", help="Target IP or URL to scan")
+    parser.add_argument("--max-pages", type=int, default=25, help="Max pages to crawl (web targets only)")
+    parser.add_argument("--no-crawl", action="store_true", help="Skip crawling, only scan the given URL")
+    parser.add_argument("--no-cve", action="store_true", help="Skip CVE lookups against detected software")
     args = parser.parse_args()
 
     all_findings = []
+    print("Starting Caelis Scan...\n")
 
-    print("🚀 Starting Caelis Scan...\n")
-
-    # 1. Local Scan
     print("[*] Scanning local machine...")
     all_findings.extend(scan_local())
 
-    # 2. Target Scan (if provided)
     if args.target:
         print(f"[*] Scanning target: {args.target}...")
-        # Try as a website
         if args.target.startswith("http"):
-            all_findings.extend(scan_web(args.target))
+            all_findings.extend(scan_web(
+                args.target,
+                max_pages=args.max_pages,
+                do_crawl=not args.no_crawl,
+                do_cve=not args.no_cve
+            ))
         else:
-            # Try as an IP/Host
             all_findings.extend(scan_network(args.target))
 
-    # Final Report
-    print("\n✅ Scan Complete. Results:\n")
+    print("\n Done Scan Complete. Results:\n")
     display_results(all_findings)
 
 if __name__ == "__main__":
