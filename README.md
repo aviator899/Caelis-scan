@@ -27,7 +27,13 @@ Scanning targets you do not own or have explicit written permission to test is i
    ```bash
    pip install -r requirements.txt
    ```
-
+   if it didn't install use a virtual enviroment
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+   ```
+   
 ## Usage
 **Local scan only:**
 ```bash
@@ -37,6 +43,5 @@ python main.py
 **Scan a specific target:**
 ```bash
 python main.py --target http://example.com
-# OR
-python main.py --target 192.168.1.1
+# ORpython main.py --target 192.168.1.1
 ```
