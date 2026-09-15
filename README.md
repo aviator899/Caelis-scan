@@ -16,7 +16,7 @@ Scanning targets you do not own or have explicit written permission to test is i
   - 🟡 **Medium** (Yellow)
   - 🔵 **Low** (Light Blue)
   - 🟢 **Info** (green)
-# should I change info to no p
+should I change info to no p
 ## Installation
 1. Clone the repo:
    ```bash
