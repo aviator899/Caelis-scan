@@ -4,7 +4,7 @@ from dataclasses import dataclass
 class Finding:
     name: str
     description: str
-    risk_level: str  # "Very Risky", "Risky", "Medium", "Low"
+    risk_level: str  # "Very Risky", "Risky", "Medium", "Low", "Info"
 
 class RiskEngine:
     # Mapping risk levels to the user's requested colors
@@ -13,6 +13,7 @@ class RiskEngine:
         "Risky": "magenta",  # Pink
         "Medium": "yellow",
         "Low": "cyan",       # Light Blue
+        "Info": "green",     # Clean/no-issue findings
     }
 
     @staticmethod
