@@ -15,6 +15,7 @@ Scanning targets you do not own or have explicit written permission to test is i
   - 🟣 **Risky** (Pink/Magenta)
   - 🟡 **Medium** (Yellow)
   - 🔵 **Low** (Light Blue)
+  - 🟢 **Info** (green)
 
 ## Installation
 1. Clone the repo:
