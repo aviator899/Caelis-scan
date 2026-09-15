@@ -1,12 +1,12 @@
-# 🛡️ Caelis Scan
+# Caelis Scan
 
 A modular security scanner designed to identify vulnerabilities across local systems, servers, and web applications.
 
-## ⚠️ LEGAL DISCLAIMER
+## LEGAL DISCLAIMER
 **This tool is for educational purposes and authorized security testing ONLY.** 
 Scanning targets you do not own or have explicit written permission to test is illegal. The developer assumes no liability for misuse of this tool. Use it responsibly and ethically.
 
-## 🚀 Features
+## Features
 - **Local Auditor:** Checks system configurations and permissions.
 - **Network Scanner:** Identifies open ports and services.
 - **Web Scanner:** Analyzes HTTP headers for security flaws.
@@ -16,7 +16,7 @@ Scanning targets you do not own or have explicit written permission to test is i
   - 🟡 **Medium** (Yellow)
   - 🔵 **Low** (Light Blue)
 
-## 🛠️ Installation
+## Installation
 1. Clone the repo:
    ```bash
    git clone https://github.com/aviator899/Caelis-scan.git
@@ -27,7 +27,7 @@ Scanning targets you do not own or have explicit written permission to test is i
    pip install -r requirements.txt
    ```
 
-## 💻 Usage
+## Usage
 **Local scan only:**
 ```bash
 python main.py
