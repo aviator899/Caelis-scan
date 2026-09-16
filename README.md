@@ -25,10 +25,6 @@ should I change info to no p
    ```
 2. Install dependencies:
    ```bash
-   pip install -r requirements.txt
-   ```
-   if it didn't install use a virtual enviroment
-   ```bash
    python3 -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
